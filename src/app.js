@@ -1,5 +1,6 @@
+import dotenv from 'dotenv';
+dotenv.config();
 import { resolve } from 'path';
-
 import './database';
 
 import express from 'express';
@@ -19,13 +20,13 @@ const whiteList = [
 ];
 
 const corsOptions = {
-  origin: function (origin, callback) {
-    if(whiteList.indexOf(origin) !== -1 || !origin) {
+  origin(origin, callback) {
+    if (whiteList.indexOf(origin) !== -1 || !origin) {
       callback(null, true);
     } else {
       callback(new Error('Not allowed by CORS'));
     }
-  }
+  },
 };
 
 class App {

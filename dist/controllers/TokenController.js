@@ -2,6 +2,7 @@
 var _User = require('../models/User'); var _User2 = _interopRequireDefault(_User);
 
 class TokenController {
+  // eslint-disable-next-line class-methods-use-this
   async store(req, res) {
     const { email = '', password = '' } = req.body;
 
@@ -30,7 +31,7 @@ class TokenController {
       expiresIn: process.env.TOKEN_EXPIRATION,
     });
 
-    return res.json({ token, user: { nome: user.nome, id, email } });
+    return res.json(token);
   }
 }
 

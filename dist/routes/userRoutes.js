@@ -10,8 +10,8 @@ const router = new (0, _express.Router)();
 // router.get('/:id', userController.show); // Lista usuário
 
 router.post('/', _UserController2.default.store);
-router.put('/', _loginRequired2.default, _UserController2.default.update);
-router.delete('/', _loginRequired2.default, _UserController2.default.delete);
+router.put('/', _UserController2.default.update);
+router.delete('/', _UserController2.default.delete);
 
 exports. default = router;
 

@@ -6,7 +6,7 @@ var _bcryptjs = require('bcryptjs'); var _bcryptjs2 = _interopRequireDefault(_bc
     super.init({
       nome: {
         type: _sequelize2.default.STRING,
-        defaultValue: '',
+        defaultValue: ' ',
         validate: {
           len: {
             args: [3, 255],
@@ -16,7 +16,7 @@ var _bcryptjs = require('bcryptjs'); var _bcryptjs2 = _interopRequireDefault(_bc
       },
       email: {
         type: _sequelize2.default.STRING,
-        defaultValue: '',
+        defaultValue: ' ',
         unique: {
           msg: 'Email já existe',
         },
@@ -28,11 +28,11 @@ var _bcryptjs = require('bcryptjs'); var _bcryptjs2 = _interopRequireDefault(_bc
       },
       password_hash: {
         type: _sequelize2.default.STRING,
-        defaultValue: '',
+        defaultValue: ' ',
       },
       password: {
         type: _sequelize2.default.VIRTUAL,
-        defaultValue: '',
+        defaultValue: ' ',
         validate: {
           len: {
             args: [6, 50],

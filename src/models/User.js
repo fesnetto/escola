@@ -6,7 +6,7 @@ export default class User extends Model {
     super.init({
       nome: {
         type: Sequelize.STRING,
-        defaultValue: '',
+        defaultValue: ' ',
         validate: {
           len: {
             args: [3, 255],
@@ -16,7 +16,7 @@ export default class User extends Model {
       },
       email: {
         type: Sequelize.STRING,
-        defaultValue: '',
+        defaultValue: ' ',
         unique: {
           msg: 'Email já existe',
         },
@@ -28,11 +28,11 @@ export default class User extends Model {
       },
       password_hash: {
         type: Sequelize.STRING,
-        defaultValue: '',
+        defaultValue: ' ',
       },
       password: {
         type: Sequelize.VIRTUAL,
-        defaultValue: '',
+        defaultValue: ' ',
         validate: {
           len: {
             args: [6, 50],
