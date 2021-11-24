@@ -5,7 +5,7 @@
     super.init({
       nome: {
         type: _sequelize2.default.STRING,
-        defaultValue: '',
+        defaultValue: ' ',
         validate: {
           len: {
             args: [3, 255],
@@ -15,7 +15,7 @@
       },
       sobrenome: {
         type: _sequelize2.default.STRING,
-        defaultValue: '',
+        defaultValue: ' ',
         validate: {
           len: {
             args: [3, 255],
@@ -25,7 +25,7 @@
       },
       email: {
         type: _sequelize2.default.STRING,
-        defaultValue: '',
+        defaultValue: ' ',
         unique: {
           msg: 'E-mail já existe',
         },
@@ -37,7 +37,7 @@
       },
       idade: {
         type: _sequelize2.default.INTEGER,
-        defaultValue: '',
+        defaultValue: ' ',
         validate: {
           isInt: {
             msg: 'Idade precisa ser um número inteiro',
@@ -46,7 +46,7 @@
       },
       peso: {
         type: _sequelize2.default.FLOAT,
-        defaultValue: '',
+        defaultValue: ' ',
         validate: {
           isFloat: {
             msg: 'Peso precisa ser um número inteiro ou de ponto flutuante',
@@ -55,7 +55,7 @@
       },
       altura: {
         type: _sequelize2.default.FLOAT,
-        defaultValue: '',
+        defaultValue: ' ',
         validate: {
           isFloat: {
             msg: 'Altura precisa ser um número inteiro ou de ponto flutuante',

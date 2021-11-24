@@ -2,9 +2,8 @@
 var _User = require('../models/User'); var _User2 = _interopRequireDefault(_User);
 
 class TokenController {
-  // eslint-disable-next-line class-methods-use-this
   async store(req, res) {
-    const { email = '', password = '' } = req.body;
+    const { email = ' ', password = ' ' } = req.body;
 
     if (!email || !password) {
       return res.status(401).json({
